@@ -1,0 +1,25 @@
+<div class="container">
+  <%- include("partials/header.ejs") %>
+  <form action="/submit" method="POST" class="row g-3">
+    <h1>Drop your thoughts here</h1>
+    <div>
+      <label for="title" class="form-label">Title</label>
+      <input
+        class="form-control form-control-lg"
+        type="text"
+        id="title"
+        placeholder="type your title here"
+        aria-label="type your title here"
+        name="title"
+      />
+    </div>
+    <div>
+      <label for="description" class="form-label">Description</label>
+      <textarea name="description" class="form-control" id="description" rows="4"></textarea>
+      <button type="submit" class="theme-primary btn-solid btn-styled">
+        Post
+      </button>
+    </div>
+  </form>
+  <%- include("partials/footer.ejs") %>
+</div>
