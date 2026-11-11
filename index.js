@@ -34,6 +34,6 @@ app.get("/blog/:index", (req, res) => {
 });
 
 app.get("/gallery", (req, res) => {
-  res.render("gallery.ejs", { posts: allPosts });
+  res.render("gallery.ejs", { posts: allPosts, pageStyle: "/styles/gallery.css"});
 });
 
