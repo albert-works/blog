@@ -1,0 +1,26 @@
+<div class="container">
+  <%- include("partials/header.ejs", { currentPage: "blog-edit" }) %>
+  <form action="/blog/<%= postDetails.index %>/update" method="POST" class="row g-3">
+    <h1>Edit Post</h1>
+    <div>
+      <label for="title" class="form-label">Title</label>
+      <input
+        class="form-control form-control-lg"
+        type="text"
+        id="title"
+        placeholder="type your title here"
+        aria-label="type your title here"
+        name="title"
+        value="<%= postDetails.selectedPost.title %>"
+      />
+    </div>
+    <div>
+      <label for="description" class="form-label">Description</label>
+      <textarea name="description" class="form-control" id="description" rows="4"><%= postDetails.selectedPost.description %></textarea>
+      <button type="submit" class="theme-primary btn-solid btn-styled">
+        Update
+      </button>
+    </div>
+  </form>
+  <%- include("partials/footer.ejs") %>
+</div>
